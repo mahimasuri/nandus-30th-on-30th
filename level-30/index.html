@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#11110f">
+<title>LEVEL 30 — Nandu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="photoPopup" class="photo-popup hidden">
+  <div class="photo-window">
+    <button id="closePhoto" class="xbtn">×</button>
+    <div class="photo-meta"><span>NANDU DATABASE</span><span id="photoNo">EVIDENCE 01</span></div>
+    <img id="popupPhoto" alt="Birthday memory">
+    <p id="photoCaption"></p>
+  </div>
+</div>
+
+<main id="app">
+<section id="boot" class="screen active">
+  <div class="grain"></div>
+  <div class="boot-player">
+    <div class="disc-wrap"><div class="disc"><span>N30</span></div></div>
+    <div class="player-copy">
+      <div class="eyebrow">SIDE A · BIRTHDAY EDITION</div>
+      <h1>LEVEL <em>30</em></h1>
+      <p>ABHINANDAN · THE BIRTHDAY ALBUM</p>
+      <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+  <div class="date">30.09.1996 going to 30.09.2026</div>
+  <button class="play-main" id="startBtn"><span>▶</span> PRESS START</button>
+  <p class="tiny">A highly scientific birthday assessment. No major bugs expected.</p>
+</section>
+
+<section id="intro" class="screen">
+  <div class="top-player mini-player">
+    <div class="mini-disc spinning"><span>N30</span></div>
+    <div><b>NANDU FM</b><small>Birthday Edition</small></div>
+    <div class="controls">
+      <button>⏮</button><button id="globalPlay">▶</button><button>⏭</button>
+    </div>
+  </div>
+  <div class="computer card">
+    <div class="computer-icon">⌁</div>
+    <div><div class="eyebrow">COMPUTER ONLINE</div><h2>Good morning, Nandu.</h2>
+    <p id="introText"></p></div>
+  </div>
+  <div class="objective card">
+    <div><span>PLAYER</span><strong>NANDU</strong></div>
+    <div><span>CO-PLAYER</span><strong>MAHIMA</strong></div>
+    <div><span>CURRENT LEVEL</span><strong>29</strong></div>
+    <div><span>TARGET</span><strong>30 ⟶</strong></div>
+  </div>
+  <button class="primary" id="beginBtn">TRACK 01 · PRESS PLAY</button>
+</section>
+
+<section id="bulls" class="screen game-screen">
+<header class="game-header"><div><span class="eyebrow">TRACK 01</span><h2>BULLS &amp; COWS</h2></div><div class="xp"><span>NANDU XP</span><strong id="xp1">000</strong></div></header>
+<div class="progress"><i style="width:18%"></i></div>
+<div class="card rules">
+  <div class="track-label">THE ORIGINAL DUO</div>
+  <p>You + Mahima vs the computer. Four different digits. Crack the number before the track ends.</p>
+  <div class="rule-grid"><div><b>🐂 BULL</b><span>Right digit · right place</span></div><div><b>🐄 COW</b><span>Right digit · wrong place</span></div><div><b>× MISS</b><span>Digit isn't in it</span></div></div>
+</div>
+<div class="computer-line"><span>⌁</span><p id="bullsMessage">“You have teamwork. I have computing power. Seems fair.”</p></div>
+<div class="card code-panel">
+  <div class="guess-slots" id="guessSlots"><div>_</div><div>_</div><div>_</div><div>_</div></div>
+  <div class="keypad" id="keypad"></div>
+  <div class="key-actions"><button class="secondary" id="backspaceBtn">⌫</button><button class="primary compact" id="guessBtn">LOCK IN GUESS</button></div>
+  <p class="error" id="guessError"></p>
+</div>
+<div class="attempts card"><div class="section-title"><span>ATTEMPTS</span><span id="attemptCount">0 / 10</span></div><div id="history"></div></div>
+<div id="bullsWin" class="card hidden result-card"><div class="result-icon">✓</div><h3>CO-OP VICTORY</h3><p>NANDU + MAHIMA</p><strong>+100 XP</strong><button class="primary" id="musicBtn">UNLOCK TRACK 02 →</button></div>
+</section>
+
+<section id="music" class="screen game-screen">
+<header class="game-header"><div><span class="eyebrow">TRACK 02</span><h2>NANDU FM</h2></div><div class="xp"><span>NANDU XP</span><strong id="xp2">100</strong></div></header>
+<div class="progress"><i style="width:38%"></i></div>
+<div class="now-playing card">
+  <div class="record-wrap"><div class="record spinning"><span>N30</span></div></div>
+  <div class="np-copy"><span class="eyebrow">NOW PLAYING</span><h3 id="trackTitle">NANDU FM</h3><p id="trackArtist">EDM · melody · Punjabi · good vibes</p>
+    <div class="player-progress"><i id="playerProgress"></i></div>
+    <div class="controls big"><button id="prevSong">⏮</button><button id="playSong">▶</button><button id="nextSong">⏭</button><button id="shuffleSong">⤨</button><button id="repeatSong">↻</button></div>
+  </div>
+</div>
+<div class="card"><div class="track-label">VIBE CHECK</div><h3>Perfect evening drive.</h3><p>The car is suspiciously clean. What goes on Nandu FM?</p><div class="choices" id="musicChoices"></div><p class="feedback" id="musicFeedback"></p></div>
+<div class="card mini"><p class="eyebrow">CURRENT ROTATION</p><div class="song-list">
+<div><span>01</span><b>Laavah</b><small>Jasmine</small></div><div><span>02</span><b>Wakhra Swag</b><small>Punjabi</small></div>
+<div><span>03</span><b>Lipstick</b><small>Charlie Puth</small></div><div><span>04</span><b>Sunflower</b><small>Post Malone</small></div></div></div>
+<button class="primary" id="sportsBtn">UNLOCK TRACK 03 →</button>
+</section>
+
+<section id="sports" class="screen game-screen">
+<header class="game-header"><div><span class="eyebrow">TRACK 03</span><h2>WEEKEND MODE</h2></div><div class="xp"><span>NANDU XP</span><strong id="xp3">150</strong></div></header>
+<div class="progress"><i style="width:58%"></i></div>
+<div class="card"><div class="track-label">THE MOOD-BASED ALGORITHM</div><h3>Saturday. No plans.</h3><p>Several excellent options. Pick the move that matches the mood.</p><div class="choices" id="sportsChoices"></div><p class="feedback" id="sportsFeedback"></p></div>
+<div class="stats card">
+<div><span>🏎️ Ferrari</span><b>LOCKED IN</b></div><div><span>⚽ Chelsea</span><b>DETECTED</b></div><div><span>🏓 Table tennis</span><b>SKILL</b></div>
+<div><span>🏸 Badminton</span><b>SKILL</b></div><div><span>🚲 Cycling</span><b>ACTIVE</b></div><div><span>🏕️ Camping</span><b>OCCASIONAL</b></div>
+</div><button class="primary" id="foodBtn">UNLOCK TRACK 04 →</button>
+</section>
+
+<section id="food" class="screen game-screen">
+<header class="game-header"><div><span class="eyebrow">TRACK 04</span><h2>FOOD LAB</h2></div><div class="xp"><span>NANDU XP</span><strong id="xp4">200</strong></div></header>
+<div class="progress"><i style="width:76%"></i></div>
+<div class="card"><div class="track-label">FOOD DATABASE</div><h3>ONE MEAL. ONE CHOICE.</h3><p>All excellent. What does Nandu pick <em>today</em>?</p><div class="choices" id="foodChoices"></div><p class="feedback" id="foodFeedback"></p></div>
+<div class="food-tags"><span>🍕 wood-fired pizza</span><span>🍣 sushi</span><span>🥞 dosa</span><span>🌶️ podi idli</span><span>🍝 pasta</span><span>🫓 chole bhature</span></div>
+<div class="computer-line"><span>⌁</span><p>“Sweetness parameters have been noted. Proceed accordingly.”</p></div>
+<button class="primary" id="finalBtn">UNLOCK BOSS LEVEL →</button>
+</section>
+
+<section id="final" class="screen game-screen">
+<header class="game-header"><div><span class="eyebrow">BOSS LEVEL</span><h2>30</h2></div><div class="xp"><span>NANDU XP</span><strong id="finalXp">300</strong></div></header>
+<div class="progress"><i style="width:100%"></i></div>
+<div class="final-card card"><div class="level-number">30</div><p class="eyebrow">LEVEL COMPLETE</p><h3>NANDU 30.0</h3><p>No major bugs detected.</p>
+<div class="final-stats"><div><span>🎵 Music instinct</span><b>EXCELLENT</b></div><div><span>🍕 Food standards</span><b>HIGH</b></div><div><span>🏎️ Ferrari loyalty</span><b>STRONG</b></div><div><span>🧒 Kid energy</span><b>∞</b></div><div><span>📸 Photographer mode</span><b>ACTIVE</b></div><div><span>🥚 Egg flipping</span><b>ELITE</b></div></div>
+<div class="computer-line final-line"><span>⌁</span><p>“Assessment complete. You may proceed to Level 30.”</p></div>
+<button class="primary" id="rewardBtn">UNLOCK REWARD 🎁</button></div>
+</section>
+
+<section id="reward" class="screen">
+<div class="reward card"><div class="confetti">✦ ✧ ✦</div><p class="eyebrow">FINAL UNLOCK</p><h1>HAPPY 30TH, JAAN ❤️</h1><p class="large">Cake. A little something. And one more thing...</p><div class="classified">🧳 DESTINATION: CLASSIFIED</div><p class="message">Keep being curious, kind, playful and completely yourself. The next level looks good on you.</p><p class="signature">— Mahima</p><button class="secondary" id="replayBtn">PLAY AGAIN</button></div>
+</section>
+</main>
+<script src="config.js"></script><script src="game.js"></script>
+</body></html>
