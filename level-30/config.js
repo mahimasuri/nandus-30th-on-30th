@@ -21,8 +21,30 @@ const CONFIG = {
     { title: "Sunflower", artist: "Post Malone", url: "https://www.youtube.com/results?search_query=Post+Malone+Sunflower" }
   ],
   photos: [
-    "IMG_4718.jpeg","IMG_2253.png","IMG_1398.jpeg","IMG_2391.jpeg","IMG_1434.jpeg",
-    "IMG_1181.jpeg","IMG_4726.jpeg","IMG_1008.jpeg","IMG_7028.jpeg","IMG_2856.jpeg",
-    "IMG_1450.jpeg","IMG_1430.jpeg","IMG_1265.jpeg","IMG_2021.jpeg","IMG_6898.jpeg"
+    "IMG_4718.jpeg",
+    "IMG_2253.png",
+    "IMG_1398.jpeg",
+    "IMG_2391.jpeg",
+    "IMG_1434.jpeg",
+    "IMG_1181.jpeg",
+    "IMG_4726.jpeg",
+    "IMG_1008.jpeg",
+    "IMG_7028.jpeg",
+    "IMG_2856.jpeg",
+    "IMG_1450.jpeg",
+    "IMG_1430.jpeg",
+    "IMG_1265.jpeg",
+    "IMG_2021.jpeg",
+    "IMG_6898.jpeg",
+    "IMG_2986.PNG",
+    "IMG_3150.jpeg",
+    "IMG_3234.jpeg",
+    "IMG_6398 2.jpeg",
+    "IMG_6427.jpeg",
+    "IMG_6588.jpeg",
+    "IMG_6622.jpeg",
+    "IMG_6689.jpeg",
+    "IMG_9578.jpeg",
+    "fe0de7ed-d687-4ccd-8f0b-efa491079949.jpg"
   ]
 };
