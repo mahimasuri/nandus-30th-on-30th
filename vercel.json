@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "outputDirectory": "level-30"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/level-30/$1"
+    }
+  ]
 }
